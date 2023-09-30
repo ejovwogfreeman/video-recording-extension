@@ -5,6 +5,27 @@
   font-size: 20px;
 }
 
+.header a {
+  background-color: #120b48;
+  color: white;
+  padding: 10px;
+  outline: none;
+  border: 0px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+}
+
+.header a svg {
+  margin-left: 10px;
+  margin-top: 3px;
+}
+
 image {
   width: 100%;
 }
@@ -63,4 +84,9 @@ image {
 }
 #how_it_works h3 {
   margin: 20px 0px;
+}
+
+.grey {
+  background-color: rgba(0, 0, 0, 0.05);
+  height: 100px;
 }

@@ -26,7 +26,7 @@ const Home = () => {
             Helo your friends and beloved ones by creating and sending videos on
             how to get things done on a website
           </p>
-          <Link>
+          <Link to="/login">
             <span>Install HelpMeOut</span>
             <BsArrowRightShort />
           </Link>
@@ -35,6 +35,7 @@ const Home = () => {
           <img src={img} alt="" />
         </div>
       </div>
+      <div className="grey"></div>
       <div id="features">
         <div className="left">
           <div>
@@ -78,6 +79,7 @@ const Home = () => {
           <img src={img2} alt="" />
         </div>
       </div>
+      <div className="grey"></div>
       <div id="how_it_works">
         <div>
           <span>1</span>

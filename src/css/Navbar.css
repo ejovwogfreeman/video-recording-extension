@@ -17,9 +17,7 @@
 .navbar span {
   margin: 0px 10px;
 }
-.navbar .logo {
-  background-color: transparent;
-}
+
 .navbar .features a {
   margin: 5px;
 }
@@ -27,4 +25,14 @@
   background-color: rgba(0, 0, 0, 0.05);
   padding: 8px 10px;
   border-radius: 10px;
+}
+
+.navbar .logo {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+}
+
+.navbar .logo h3 {
+  margin-left: 10px;
 }

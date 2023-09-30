@@ -26,6 +26,7 @@
   border-radius: 10px;
   padding: 20px;
   text-align: center;
+  z-index: 1000;
 }
 
 .modal .svg-cont {
@@ -38,4 +39,35 @@
   font-size: 30px;
   display: block;
   text-align: right;
+  cursor: pointer;
+}
+
+.modal img {
+  margin-bottom: 20px;
+}
+
+.modal p {
+  margin-bottom: 30px;
+}
+
+.modal button {
+  background-color: #120b48;
+  color: white;
+  padding: 10px;
+  outline: none;
+  border: 0px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.modal small {
+  margin-bottom: 20px;
+  display: block;
+}
+
+.modal a {
+  color: #120b48;
+  font-weight: bold;
 }

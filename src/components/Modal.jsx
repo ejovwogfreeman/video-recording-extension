@@ -4,16 +4,16 @@ import sent from "../assets/sent.png";
 import "../css/Modal.css";
 import { Link } from "react-router-dom";
 
-const Modal = () => {
+const Modal = ({ handleModal }) => {
   return (
     <div className="modal-container">
       <div className="dark-bg"></div>
       <div className="modal">
         <div className="svg-cont">
-          <IoCloseCircleOutline />
+          <IoCloseCircleOutline onClick={handleModal} />
         </div>
         <br />
-        <img src={sent} alt="" />
+        <img src={sent} alt="" width="50%" />
         <p>
           Your email has been sent to <br />
           ejovwogfreeman007@gmail.com
@@ -22,7 +22,7 @@ const Modal = () => {
           Would you need to view this video later? <br />
           Save to your account now!
         </p>
-        <button>Save Now</button>
+        <button>Save Now</button> <br />
         <small>
           Don't have an account yet? <Link to="/register">Create account</Link>
         </small>

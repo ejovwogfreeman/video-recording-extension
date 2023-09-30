@@ -17,3 +17,13 @@
 .top-bar span {
   margin: 0px 10px;
 }
+
+.top-bar .logo {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+}
+
+.top-bar .logo h3 {
+  margin-left: 10px;
+}

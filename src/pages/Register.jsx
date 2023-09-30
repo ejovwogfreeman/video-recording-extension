@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import google from "../assets/google.png";
 import facebook from "../assets/facebook.png";
 
-const Login = () => {
+const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -79,7 +79,7 @@ const Login = () => {
             </button>
           </div>
           <small>
-            New Here? <Link to="/register">Register</Link>
+            Already have an account? <Link to="/login">Login</Link>
           </small>
         </form>
       </div>
@@ -87,4 +87,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;

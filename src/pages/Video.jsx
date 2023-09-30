@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../css/Video.css";
 import Topbar from "../components/Topbar";
 import video from "../assets/record.mp4";
@@ -9,10 +9,13 @@ import { Link } from "react-router-dom";
 import Modal from "../components/Modal";
 
 const Video = () => {
-  let user = false;
+  const [modal, setModal] = useState(false);
+  const handleModal = () => {
+    setModal(!modal);
+  };
+  let user = true;
   return (
     <div className="container">
-      {/* <Modal /> */}
       <Topbar />
       {user ? (
         <>
@@ -22,18 +25,17 @@ const Video = () => {
               <span>How To Create A Facebook Ad Listing</span>
               <IoCreateOutline />
             </h1>
-
             <video src={video} width="100%"></video>
             <div className="search-link">
               <div>
                 <input type="text" placeholder="enter email of reciever" />
-                <button>Send</button>
+                <button onClick={handleModal}>Send</button>
               </div>
               <div>
                 <input type="text" />
                 <button>
                   <MdOutlineContentCopy />
-                  <span>Send</span>
+                  <span>Copy</span>
                 </button>
               </div>
             </div>
@@ -107,7 +109,7 @@ const Video = () => {
               <div className="search-link">
                 <div>
                   <input type="text" placeholder="enter email of reciever" />
-                  <button>Send</button>
+                  <button onClick={handleModal}>Send</button>
                 </div>
                 <section>
                   <h3 style={{ marginBottom: "10px" }}>Video Url</h3>
@@ -115,7 +117,7 @@ const Video = () => {
                     <input type="text" />
                     <button>
                       <MdOutlineContentCopy />
-                      <span>Send</span>
+                      <span>Copy</span>
                     </button>
                   </div>
                 </section>
@@ -182,6 +184,7 @@ const Video = () => {
           </div>
         </>
       )}
+      {modal && <Modal handleModal={handleModal} />}
     </div>
   );
 };
