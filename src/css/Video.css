@@ -1,0 +1,146 @@
+.video-comp {
+  padding: 0 10%;
+  padding-bottom: 200px;
+}
+
+video {
+  border-radius: 20px;
+}
+
+.video-comp h1 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.video-comp svg {
+  margin-left: 10px;
+}
+
+.search-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 0px;
+}
+
+.search-link div {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  width: 400px;
+}
+
+.search-link div input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+.search-link div button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 10px;
+  width: 120px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.search-link div:last-child button {
+  background-color: rgba(0, 0, 0, 0.05);
+  width: 150px;
+  color: black;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  margin: 10px 0px 30px;
+}
+.buttons a {
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.buttons a span {
+  margin-left: 10px;
+}
+
+.buttons a svg {
+  font-size: 20px;
+}
+
+.buttons a:nth-child(1) svg {
+  color: #1877f2;
+}
+.buttons a:nth-child(2) svg {
+  color: #59ce72;
+}
+.buttons a:nth-child(3) svg {
+  color: #0088cc;
+}
+
+.transcript select {
+  margin: 10px 0px 30px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  outline: none;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.transcript div {
+  display: flex;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.transcript div span {
+  font-size: 25px;
+}
+
+.transcript div p {
+  margin-left: 50px;
+}
+
+.unauthenticated {
+  display: flex;
+  padding: 0 10%;
+  padding-bottom: 200px;
+}
+
+.unauthenticated .search-link {
+  display: block;
+}
+
+.unauthenticated .search-link div {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.unauthenticated .left {
+  flex: 1;
+  padding-right: 50px;
+}
+.unauthenticated .right {
+  flex: 1;
+}

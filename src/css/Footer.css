@@ -1,0 +1,13 @@
+footer {
+  background-color: #120b48;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 100px 10%;
+}
+
+footer a {
+  color: white;
+  display: block;
+  margin-top: 20px;
+}

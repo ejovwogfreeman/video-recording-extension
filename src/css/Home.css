@@ -1,0 +1,66 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 50px 10%;
+  font-size: 20px;
+}
+
+image {
+  width: 100%;
+}
+
+#features {
+  display: flex;
+  align-items: center;
+  padding: 50px 10%;
+  font-size: 20px;
+}
+
+#features .left div {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+#features .left div .svg {
+  margin-right: 20px;
+  background-color: #120b48;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#features .left div svg {
+  font-size: 30px;
+  color: white;
+}
+
+#how_it_works {
+  display: flex;
+  align-items: center;
+  padding: 50px 10%;
+  font-size: 20px;
+}
+
+#how_it_works div {
+  text-align: center;
+}
+#how_it_works span {
+  background-color: #120b48;
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+#how_it_works h3 {
+  margin: 20px 0px;
+}

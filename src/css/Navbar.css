@@ -1,0 +1,30 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 10%;
+}
+
+.navbar .profile {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .profile svg {
+  font-size: 35px;
+}
+
+.navbar span {
+  margin: 0px 10px;
+}
+.navbar .logo {
+  background-color: transparent;
+}
+.navbar .features a {
+  margin: 5px;
+}
+.navbar a {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 8px 10px;
+  border-radius: 10px;
+}

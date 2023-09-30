@@ -1,0 +1,19 @@
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 10%;
+}
+
+.top-bar .profile {
+  display: flex;
+  align-items: center;
+}
+
+.top-bar .profile svg {
+  font-size: 35px;
+}
+
+.top-bar span {
+  margin: 0px 10px;
+}
