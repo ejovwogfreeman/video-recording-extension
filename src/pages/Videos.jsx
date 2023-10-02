@@ -62,7 +62,7 @@ const Video = () => {
                     {<CgMoreVertical />}
                   </Link>
                 </div>
-                <div>{x.date}</div>
+                <small>{x.date}</small>
               </div>
             );
           })}
