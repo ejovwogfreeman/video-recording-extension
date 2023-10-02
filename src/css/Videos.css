@@ -1,0 +1,35 @@
+.videos {
+  padding: 0px 10%;
+}
+.name-search {
+  padding: 30px 10%;
+}
+
+.videos .recent {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+.videos .recent .video {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+  .videos {
+    padding: 0px 5%;
+  }
+  .name-search {
+    padding: 30px 5%;
+  }
+  .videos .recent {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 450px) {
+  .videos .recent {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

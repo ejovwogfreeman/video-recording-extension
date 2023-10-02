@@ -27,3 +27,9 @@
 .top-bar .logo h3 {
   margin-left: 10px;
 }
+
+@media screen and (max-width: 1200px) {
+  .top-bar {
+    padding: 50px 5%;
+  }
+}

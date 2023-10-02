@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/Home.css";
+import "../css/Videos.css";
 import { FaSearch } from "react-icons/fa";
 import video from "../assets/record.mp4";
 import { FiLink2 } from "react-icons/fi";
@@ -49,7 +49,7 @@ const Video = () => {
         </div>
       </div>
       <div className="videos">
-        <p>Recent Files</p>
+        <p style={{ marginBottom: "20px" }}>Recent Files</p>
         <div className="recent">
           {recent.map((x) => {
             return (

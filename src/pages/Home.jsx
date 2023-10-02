@@ -26,8 +26,8 @@ const Home = () => {
             Helo your friends and beloved ones by creating and sending videos on
             how to get things done on a website
           </p>
-          <Link to="/login">
-            <span>Install HelpMeOut</span>
+          <Link to="/videos">
+            <span>See Your Videos</span>
             <BsArrowRightShort />
           </Link>
         </div>

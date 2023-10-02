@@ -101,14 +101,3 @@
 .oAuth img {
   width: 75%;
 }
-
-@media screen and (max-width: 500px) {
-  .login-container form {
-    background-color: rgba(256, 256, 256, 0.5);
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    width: 100%;
-    margin: -200px 5% 0px;
-  }
-}
