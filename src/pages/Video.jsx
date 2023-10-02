@@ -142,7 +142,7 @@ const Video = () => {
             </div>
             <div className="right">
               <div className="transcript">
-                <video src={video} width="100%"></video>
+                <video src={video} width="100%" controls></video>
                 <section style={{ margin: "30px 0px 20px" }}>
                   <h2>Transcript</h2>
                   <select name="" id="">
