@@ -144,3 +144,19 @@ video {
 .unauthenticated .right {
   flex: 1;
 }
+
+@media screen and (max-width: 500px) {
+  .search-link {
+    display: block;
+  }
+  .search-link div {
+    margin-bottom: 20px;
+  }
+  .buttons {
+    display: block;
+  }
+  .buttons a {
+    display: block;
+    margin-bottom: 20px;
+  }
+}
