@@ -41,7 +41,7 @@ const Video = () => {
         // Handle any errors that occurred during the fetch
         console.error("Fetch error:", error);
       });
-  }, [videos]);
+  }, []);
 
   const selectedVideo = videos.find((video) => video.vId === params.id);
 
@@ -65,7 +65,7 @@ const Video = () => {
             {!selectedVideo ? (
               <Loader />
             ) : (
-              <video src={selectedVideo.video} width="100%"></video>
+              <video src={selectedVideo.video} width="100%" controls></video>
             )}
             <div className="search-link">
               <div>

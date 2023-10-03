@@ -64,7 +64,7 @@ const Video = () => {
         // Handle any errors that occurred during the fetch
         console.error("Fetch error:", error);
       });
-  }, [videos]);
+  }, []);
 
   return (
     <div className="container">
@@ -89,7 +89,7 @@ const Video = () => {
               {videos.map((x) => {
                 return (
                   <div className="video" key={Math.random()}>
-                    <video src={x.video} width="100%"></video>
+                    <video src={x.video} width="100%" controls></video>
                     <div className="title-link">
                       <h3>{x.title}</h3>
                       <Link to={`/video/${x.vId}`}>
