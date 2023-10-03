@@ -41,9 +41,9 @@ const Video = () => {
         // Handle any errors that occurred during the fetch
         console.error("Fetch error:", error);
       });
-
-    const selectedVideo = videos.find((video) => video.vId === params.id);
   }, [videos]);
+
+  const selectedVideo = videos.find((video) => video.vId === params.id);
 
   const [modal, setModal] = useState(false);
   const handleModal = () => {
