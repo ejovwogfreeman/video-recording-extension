@@ -7,8 +7,42 @@ import { IoCreateOutline } from "react-icons/io5";
 import { BsFacebook, BsWhatsapp, BsTelegram } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import Modal from "../components/Modal";
+import { useParams } from "react-router-dom";
+import Loader from "../components/Loader";
 
 const Video = () => {
+  const params = useParams();
+
+  const [videos, setVideos] = useState([]);
+
+  // Define the URL of the API endpoint where your videos are hosted
+  const apiUrl = "https://seashell-app-4jicj.ondigitalocean.app/api/videos";
+
+  // Make a GET request using the Fetch API
+  fetch(apiUrl)
+    .then((response) => {
+      // Check if the response status is OK (status code 200)
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+
+      // Parse the response as JSON
+      return response.json();
+    })
+    .then((videosData) => {
+      // Handle the retrieved videos data
+      console.log("Videos data:", videosData.data);
+      setVideos(videosData.data);
+
+      // You can now work with the videosData, which contains the list of videos
+    })
+    .catch((error) => {
+      // Handle any errors that occurred during the fetch
+      console.error("Fetch error:", error);
+    });
+
+  const selectedVideo = videos.find((video) => video.vId === params.id);
+
   const [modal, setModal] = useState(false);
   const handleModal = () => {
     setModal(!modal);
@@ -25,7 +59,11 @@ const Video = () => {
               <span>How To Create A Facebook Ad Listing</span>
               <IoCreateOutline />
             </h1>
-            <video src={video} width="100%"></video>
+            {!selectedVideo ? (
+              <Loader />
+            ) : (
+              <video src={selectedVideo.video} width="100%"></video>
+            )}
             <div className="search-link">
               <div>
                 <input type="text" placeholder="enter email of reciever" />
