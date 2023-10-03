@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../css/Video.css";
 import Topbar from "../components/Topbar";
 import video from "../assets/record.mp4";
@@ -19,34 +19,37 @@ const Video = () => {
   const apiUrl = "https://seashell-app-4jicj.ondigitalocean.app/api/videos";
 
   // Make a GET request using the Fetch API
-  fetch(apiUrl)
-    .then((response) => {
-      // Check if the response status is OK (status code 200)
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
+  useEffect(() => {
+    fetch(apiUrl)
+      .then((response) => {
+        // Check if the response status is OK (status code 200)
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
 
-      // Parse the response as JSON
-      return response.json();
-    })
-    .then((videosData) => {
-      // Handle the retrieved videos data
-      console.log("Videos data:", videosData.data);
-      setVideos(videosData.data);
+        // Parse the response as JSON
+        return response.json();
+      })
+      .then((videosData) => {
+        // Handle the retrieved videos data
+        console.log("Videos data:", videosData.data);
+        setVideos(videosData.data);
 
-      // You can now work with the videosData, which contains the list of videos
-    })
-    .catch((error) => {
-      // Handle any errors that occurred during the fetch
-      console.error("Fetch error:", error);
-    });
+        // You can now work with the videosData, which contains the list of videos
+      })
+      .catch((error) => {
+        // Handle any errors that occurred during the fetch
+        console.error("Fetch error:", error);
+      });
 
-  const selectedVideo = videos.find((video) => video.vId === params.id);
+    const selectedVideo = videos.find((video) => video.vId === params.id);
+  }, [videos]);
 
   const [modal, setModal] = useState(false);
   const handleModal = () => {
     setModal(!modal);
   };
+
   let user = true;
   return (
     <div className="container">
